@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
+const apiKey = process.env.REACT_APP_NASA_KEY;
+
 function NasaPhoto() {
     const [photoData, setPhotoData] = useState(null);
 
@@ -9,7 +11,7 @@ function NasaPhoto() {
 
         async function fetchPhoto() {
             const res = await fetch(
-                `https://api.nasa.gov/planetary/apod?api_key=MkhbUiVgpaT5zbapm2sAtydg9lwQTQsPLvGonkyr`
+                `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
             );
             const data = await res.json();
             setPhotoData(data);
@@ -31,7 +33,7 @@ function NasaPhoto() {
                     title='space-video'
                     src={photoData.url}
                     frameBorder='0'
-                    gesture='media'
+                    // gesture='media'
                     allow='encrypted-media'
                     allowFullScreen
                     className='photo'
