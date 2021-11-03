@@ -5,7 +5,7 @@ function NavBar() {
     return (
         <div>
             <ul>
-                <Link to='/'>Take me Home, country road</Link>
+                <Link to='/'>E.T. Phone Home</Link>
             </ul>
         </div>
     )

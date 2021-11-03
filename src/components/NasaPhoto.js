@@ -9,7 +9,6 @@ function NasaPhoto() {
 
     useEffect(() => {
         fetchPhoto();
-
         async function fetchPhoto() {
             const res = await fetch(
                 `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
@@ -40,7 +39,7 @@ function NasaPhoto() {
                         allow='encrypted-media'
                         allowFullScreen
                         className='photo'
-                        />
+                    />
                 )}
                 <div>
                     <h1>{photoData.title}</h1>
@@ -50,6 +49,6 @@ function NasaPhoto() {
             </div>
         </>
     )
-}
+};
 
 export default NasaPhoto;
