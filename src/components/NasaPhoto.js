@@ -13,6 +13,7 @@ function NasaPhoto() {
             );
             const data = await res.json();
             setPhotoData(data);
+            console.log(data);
         }
     }, []);
 
@@ -24,6 +25,11 @@ function NasaPhoto() {
                 src={photoData.url}
                 alt={photoData.title}
             />
+            <div>
+                <h1>{photoData.title}</h1>
+                <p>{photoData.date}</p>
+                <p>{photoData.explanation}</p>
+            </div>
         </div>
     )
 }
