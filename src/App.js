@@ -7,9 +7,12 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Route component={Home} path='/' exact />
-        <Route component={NasaPhoto} path ='/nasaphoto' />
+      <div className='app'>
+        <Route component={Home} exact path='/' />
+        <Route component={NasaPhoto} path ='/NasaPhoto' />
+        {/* <Route>
+          <NasaPhoto />
+        </Route> */}
       </div>
     </BrowserRouter>
   );
