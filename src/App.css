@@ -2,7 +2,7 @@
 
 body {
   font-family: "Righteous", cursive;
-  color: #d14f4f;
+  color: yellow;
   line-height: 1.7;
   font-size: 19px;
   background-color: #fff;
@@ -56,7 +56,7 @@ body {
 }
 
 .nasa-photo .explanation {
-  color: #bbb;
+  color: #fff;
 }
 
 @media (max-width: 1280px) {
