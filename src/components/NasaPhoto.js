@@ -11,21 +11,10 @@ function NasaPhoto() {
     useEffect(() => {
         axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
         .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             setPhotoData(res.data);
         })
     }, [])
-
-    // fetchPhoto();
-        // async function fetchPhoto() {
-        //     const res = await fetch(
-        //         `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
-        //     );
-        //     const data = await res;
-        //     setPhotoData(data);
-        //     console.log(data);
-        // }
-    // }, []);
 
     if (!photoData) return <div />;
 

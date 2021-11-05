@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Home() {
     return (
         <div className='home'>
-            <Link className='home-link' to='/NasaPhoto'>Look into the stars!</Link>
+            <Link className='home-link' to='/NasaPhoto'>Travel through the cosmos</Link>
         </div>
     )
 }
