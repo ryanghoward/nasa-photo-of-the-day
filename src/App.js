@@ -10,9 +10,6 @@ function App() {
       <div className='app'>
         <Route component={Home} exact path='/' />
         <Route component={NasaPhoto} path ='/NasaPhoto' />
-        {/* <Route>
-          <NasaPhoto />
-        </Route> */}
       </div>
     </BrowserRouter>
   );

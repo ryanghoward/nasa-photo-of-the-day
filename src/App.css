@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Kanit:wght@400;900&family=Playfair+Display&display=swap");
 
 body {
-  font-family: "Righteous", cursive;
+  font-family: "Inconsolata", monospace;
   color: yellow;
   line-height: 1.7;
   font-size: 19px;
