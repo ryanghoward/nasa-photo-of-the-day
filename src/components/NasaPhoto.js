@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import NavBar from './NavBar';
@@ -6,17 +7,25 @@ const apiKey = process.env.REACT_APP_NASA_KEY;
 
 function NasaPhoto() {
     const [photoData, setPhotoData] = useState(null);
+
     useEffect(() => {
-        fetchPhoto();
-        async function fetchPhoto() {
-            const res = await fetch(
-                `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
-            );
-            const data = await res;
-            setPhotoData(data);
-            console.log(data);
-        }
-    }, []);
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+        .then((res) => {
+            console.log(res.data);
+            setPhotoData(res.data);
+        })
+    }, [])
+
+    // fetchPhoto();
+        // async function fetchPhoto() {
+        //     const res = await fetch(
+        //         `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
+        //     );
+        //     const data = await res;
+        //     setPhotoData(data);
+        //     console.log(data);
+        // }
+    // }, []);
 
     if (!photoData) return <div />;
 
